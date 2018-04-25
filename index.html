@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Рисовалка примеров</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body onload="prepareDoc()">
+  <div class="wrapper">
+    <div class="sample-wrapper">
+      <div class="sample" id="js-firstDigit" value="7"></div>
+      +
+      <div class="sample" id="js-secondDigit" value="4"></div>
+      =
+      <div  class="sample" id="summ"><input class="inputs hidden" type="text" summ="" id="summDigit" /></div>
+      <input type="button" value="Проверить" onclick="checkSumm()" class="hidden" id="checkBtn" />
+    </div>
+    <input class="inputs" type="text" max="9" min="6" oninput="validityCheck()" id="firstDigit"/>
+    <input class="inputs" type="text" oninput="validityCheck()" id="secondDigit"/><br />
+    <div class="hidden-popup" id="errorMessage"></div>
+    <div class="scale-wrapper">
+      <!-- <div id="#arrow-wrapper">
+        <svg id="arrow" version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" 
+        width="800" height="100" viewBox="0 0 800 100" preserveAspectRatio="xMinYMin meet">
+          <g id="arrow-path" style="fill: none; stroke: black;">
+            <path d="M5,100 C5,20 200,20 200,100" />
+            <line x1="200" y1="100" x2="210" y2="80" />
+            <line x1="200" y1="100" x2="190" y2="80" />
+          </g>
+        </svg>
+      </div> -->
+      <canvas id="arrow1" class="arrow" width="800" height="100"></canvas>
+      <canvas id="arrow2" class="arrow" width="800" height="100"></canvas>
+      <div id="img-wrapper">
+        <img src="img/sprite.png" />
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
